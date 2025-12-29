@@ -5,7 +5,7 @@ const app = express();
 
 // Basic Configurations
 app.use(express.json({limit: "16kb"}))
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true, limit: "32kb" }))
 app.use(express.static("public"))
 
 // CORS Configurations
